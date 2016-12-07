@@ -29,7 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdint.h>
-#include <libefdt.h>
+#include <libfdt.h>
 
 #include "libdtovl.h"
 
