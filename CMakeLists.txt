@@ -14,12 +14,11 @@ if (CMAKE_COMPILER_IS_GNUCC)
    add_definitions (-ffunction-sections)
 endif ()
 
-add_library (dtovl SHARED
-             dtovl.c)
+add_library (dtovl SHARED dtovl.c)
 
-find_library(FDT_L NAMES fdt)
+include_directories(${CMAKE_SYSROOT}/include)
 
-target_link_libraries(dtovl ${FDT_L})
+target_link_libraries(dtovl fdt)
 
 install (TARGETS dtovl DESTINATION lib)
 install(FILES libdtovl.h DESTINATION include)
