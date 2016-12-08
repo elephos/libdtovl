@@ -17,7 +17,9 @@ endif ()
 add_library (dtovl SHARED
              dtovl.c)
 
-target_link_libraries(dtovl fdt)
+find_library(FDT_L NAMES fdt)
+
+target_link_libraries(dtovl ${FDT_L})
 
 install (TARGETS dtovl DESTINATION lib)
 install(FILES libdtovl.h DESTINATION include)
